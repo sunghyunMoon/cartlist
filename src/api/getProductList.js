@@ -12,7 +12,7 @@ const request = async (url) => {
 };
 
 const getProductList = async () => {
-    const result = await request('./productData.json');
+    const result = await request('/cartlist/productData.json');
     return result;
 };
 

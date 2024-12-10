@@ -18,7 +18,10 @@ const CartToolpane = ({
     };
 
     useEffect(() => {
-        setCartList(JSON.parse(localStorage.getItem('cartList')));
+        const cartItemData = JSON.parse(localStorage.getItem('cartList'));
+        if (cartItemData && cartItemData.length) {
+            setCartList(JSON.parse(localStorage.getItem('cartList')));
+        }
     }, [setCartList]);
 
     return (
